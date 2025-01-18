@@ -2959,9 +2959,9 @@ function Library:CreateWindow(...)
         Tabs = {};
     };
 
-    --[[local Outer = Library:Create('Frame', {
+    local Outer = Library:Create('Frame', {
         AnchorPoint = Config.AnchorPoint,
-        BackgroundColor3 = Color3.new(0, 0, 0);
+        BackgroundColor3 = Color3.new(255,255,255);
         BorderSizePixel = 0;
         Position = Config.Position,
         Size = Config.Size,
@@ -2985,7 +2985,7 @@ function Library:CreateWindow(...)
     Library:AddToRegistry(Inner, {
         BackgroundColor3 = 'MainColor';
         BorderColor3 = 'AccentColor';
-    });]]
+    });
 
     local WindowLabel = Library:CreateLabel({
         Position = UDim2.new(0, 7, 0, 0);
@@ -2996,7 +2996,7 @@ function Library:CreateWindow(...)
         Parent = Inner;
     });
 
-    --[[local MainSectionOuter = Library:Create('Frame', {
+    local MainSectionOuter = Library:Create('Frame', {
         BackgroundColor3 = Library.BackgroundColor;
         BorderColor3 = Library.OutlineColor;
         Position = UDim2.new(0, 8, 0, 25);
@@ -3022,7 +3022,7 @@ function Library:CreateWindow(...)
 
     Library:AddToRegistry(MainSectionInner, {
         BackgroundColor3 = 'BackgroundColor';
-    });]]
+    });
 
     local TabArea = Library:Create('Frame', {
         BackgroundTransparency = 1;
